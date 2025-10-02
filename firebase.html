@@ -8,7 +8,7 @@
   <body>
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-      import { getFirestore, collection, addDoc } from "https://firebase.google.com/docs/web/setup#available-libraries";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAPD9zzR8Zutuus-FlOFyFttHmUBLXVcLQ",
@@ -23,7 +23,7 @@ const firebaseConfig = {
       const db = getFirestore(app);
 
       const setPeliculas = async() =>{
-        const data = await fetch('https://localhost/cinestar_sweb_php/peliculas')
+        const data = await fetch('http://localhost/cinestar_sweb_php/peliculas')
         const peliculas = await data.json()
         peliculas.data.forEach(pelicula => {
           addDoc(collection(db,'peliculas'), pelicula)
@@ -31,13 +31,13 @@ const firebaseConfig = {
       }
 
       const setCines = async() =>{
-        const data = await fetch('https://localhost/cinestar_sweb_php/cines')
+        const data = await fetch(`http://localhost/cinestar_sweb_php/cines`)
         const cines = await data.json()
         cines.data.forEach(async cine => {
-          const peliculas = await fetch('https://localhost/cinestar_sweb_php/cines/${cine.id}/peliculas')
+          const peliculas = await fetch(`http://localhost/cinestar_sweb_php/cines/${cine.id}/peliculas`)
           cine.peliculas = (await peliculas.json()).data
 
-          const tarifas = await fetch('https://localhost/cinestar_sweb_php/cines/${cine.id}/tarifas')
+          const tarifas = await fetch(`http://localhost/cinestar_sweb_php/cines/${cine.id}/tarifas`)
           cine.tarifas = (await tarifas.json()).data
           addDoc(collection(db,'cines'), cine)
         })
