@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+
+ // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const setPeliculas = async() =>{
+        const data = await fetch('https://localhost/cinestar_sweb_php/peliculas')
+        const peliculas = await data.json()
+        peliculas.data.forEach(pelicula => {
+          addDoc(collection(db,'peliculas'), pelicula)
+        })
+      }
+
+      const setCines = async() =>{
+        const data = await fetch('https://localhost/cinestar_sweb_php/cines')
+        const cines = await data.json()
+        cines.data.forEach(async cine => {
+          const peliculas = await fetch(https://localhost/cinestar_sweb_php/cines/${cine.id}/peliculas)
+          cine.peliculas = (await peliculas.json()).data
+
+          const tarifas = await fetch(https://localhost/cinestar_sweb_php/cines/${cine.id}/tarifas)
+          cine.tarifas = (await tarifas.json()).data
+          addDoc(collection(db,'cines'), cine)
+        })
+
+      }
+
+      setPeliculas()
+      setCines()
+    </script>
+
+  </body>
+</html>
