@@ -22,6 +22,15 @@ const firebaseConfig = {
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
 
+      window.db = db;
+
+      window.collection = collection;
+      window.query = query;
+      window.where = where;
+      window.getDocs = getDocs;
+      window.doc = doc;
+      window.getDoc = getDoc;
+
       const setPeliculas = async() =>{
         const data = await fetch('http://localhost/cinestar_sweb_php/peliculas')
         const peliculas = await data.json()
