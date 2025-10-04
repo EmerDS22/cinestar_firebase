@@ -66,4 +66,4 @@ const getPelicula = async () => {
         document.getElementById('contenido-interno').innerHTML = "<h2>Ocurrió un error al cargar la película.</h2>";
     }
 }
-getPelicula()
+document.addEventListener('DOMContentLoaded',getPelicula);

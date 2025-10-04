@@ -37,4 +37,4 @@ const getCines = async () => {
         document.getElementById('contenido-interno').innerHTML = "<h2>Ocurrió un error al cargar los cines.</h2>";
     }
 }
-getCines()
+document.addEventListener('DOMContentLoaded',getCines);

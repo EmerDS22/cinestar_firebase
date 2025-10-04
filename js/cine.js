@@ -94,4 +94,4 @@ const getCine = async () => {
         document.getElementById('contenido-interno').innerHTML = "<h2>Ocurrió un error al cargar el detalle del cine.</h2>";
     }
 }
-getCine()
+document.addEventListener('DOMContentLoaded',getCine);

@@ -62,7 +62,26 @@
 				<p>Copyright © 2016 ® Multicines CINESTAR - Todos los Derechos Reservados</p>
 			</div>
 		</footer>
-		<script src="js/peliculas.js"></script>
+		<script type="module">
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAPD9zzR8Zutuus-FlOFyFttHmUBLXVcLQ",
+    authDomain: "cinestar-a7b67.firebaseapp.com",
+    projectId: "cinestar-a7b67",
+    storageBucket: "cinestar-a7b67.firebasestorage.app",
+    messagingSenderId: "750140514881",
+    appId: "1:750140514881:web:cdc1f8b56de2449f489cc0"
+};
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app);
+
+    window.collection = collection;
+    window.addDoc = addDoc;
+		</script>
+		<script type="module" src="js/peliculas.js"></script>
 
 	</body>
 </html>
