@@ -8,7 +8,7 @@ import {
     sendPasswordResetEmail,         
     updatePassword,                 
     onAuthStateChanged 
-} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAPD9zzR8Zutuus-FlOFyFttHmUBLXVcLQ",
