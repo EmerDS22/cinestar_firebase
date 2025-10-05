@@ -1,67 +1,121 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<meta name="description" content="Multicines Cinestar es una empresa pionera en el formato de multicines en el Perú. Información de películas, estrenos, concursos y más">
-		<link rel="shortcut icon" href="img/varios/favicon.ico">
-		<link href="css/estilos.css" rel="stylesheet" type="text/css">
-		<title>Multicines Cinestar</title>
-	</head>
-	<body>
-
-		<header>
-			<nav class="nav-sec">
-        		<a href="index.html">Inicio</a>&nbsp;&nbsp;l&nbsp;&nbsp;
-        		<a href="http://www.cinestar.com.pe/quienes_somos">Quiénes somos</a>&nbsp;&nbsp;l&nbsp;&nbsp;
-        		<a href="http://www.cinestar.com.pe/trabaja_con_nosotros">Trabaja con nosotros</a>&nbsp;&nbsp;l&nbsp;&nbsp;
-        		<a href="https://www.efact.pe/consult.html" target="_blank">Consulta tu comprobante de pago </a>&nbsp;&nbsp;l&nbsp;&nbsp;
-        		<a href="http://www.cinestar.com.pe/contactenos/#contenido_titulo" class="anchorLink">Contáctenos</a>
-			</nav>
-			<div class="area-logo">
-				<a href="index.html"><img src="img/varios/logo-cinestar.png"/></a>
-			</div>
-			<nav class="menu">
-				<span class="img-social">
-					<a href="http://www.facebook.com/multicinestar" target="_blank"><img src="img/varios/ico-face.png"/></a>
-					<a href="http://www.twitter.com/multicinestar" target="_blank"><img src="img/varios/ico-twitter.png"/></a>
-				</span>
-				<span class="social">Síguenos en: </span>
-				<ul class="menu-principal">
-		    		<li class="menu-item"><a href="peliculas.html?id=cartelera">Cartelera</a></li>
-		       		<li class="menu-item"><a href="peliculas.html?id=estrenos">Próximos estrenos</a></li>
-		       		<li class="menu-item"><a href="http://www.cinestar.com.pe/starcard">Star Card</a></li>
-		        	<li class="menu-item"><a href="cines.html">Nuestros Cines</a></li>
-		        	<li class="menu-item"><a href="http://www.cinestar.com.pe/ventas_corporativas">Ventas Corporativas</a></li>
-		        	<li class="menu-item"><a href="http://www.cinestar.com.pe/promociones">Promociones</a></li>
-		        	<li class="menu-item"><a href="http://www.cinestar.com.pe/cinefilo_star">Blog</a></li>
-		    	</ul>
-			</nav>
-			<div class="slider">
-
-			</div>
-			<div class="papaya">
-				<a href="http://www.cinepapaya.com/pe/cinestar" target="_blank"><img src="img/varios/bg-papaya.jpg"/></a>
-			</div>
-		</header>
-	
-		<div class="contenido">
-			<div class="publicidad">
-				<a href="http://www.cinestar.com.pe/starcard/"><img src="img/varios/starcard.jpg"/></a>
-				<a href="http://www.cinestar.com.pe/cinefilo_star/"><img src="img/varios/cinefilo-star.jpg"/></a>
-			</div>
-			<div class="contenido-interno" id="contenido-interno">
-				
-			</div>
-		</div>
-		<div class="clearbox"><br/></div>
-
-		<footer>
-			<div class="contenido-footer">
-				<p>Copyright © 2016 ® Multicines CINESTAR - Todos los Derechos Reservados</p>
-			</div>
-		</footer>
-
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Animado Usando HTML y CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+    <div class="login-box">
+        <form action="">
+            <h1>Iniciar Sesión</h1>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Recuérdame</label>
+                <a href="#" class="forgot-link">¿Olvidaste la Contraseña?</a>
+            </div>
+            <div class="change-pass">
+                <a href="#" class="change-pass-link">Cambiar Contraseña</a>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+            <div class="register-link">
+                <p>¿No tienes una Cuenta?<label>  </label><a href="#">Regístrate</a></p>
+            </div>
+            <div class="social-links">
+                <p><a href="https://www.google.com/"><ion-icon name="logo-google"></ion-icon></a><label>  </label><a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a><label>  </label><a href="https://github.com/"><ion-icon name="logo-github"></ion-icon></a></p>
+            </div>
+        </form>
+    </div>
+    <div class="register-box">
+        <form action="">
+            <h1>Registro</h1>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Usuario</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Confirmar Contraseña</label>
+            </div>
+            <div class="terms-conditions">
+                <label><input type="checkbox">Aceptar Términos y Condiciones</label>                
+            </div>
+            <button type="submit">Registrarse</button>
+            <div class="login-link">
+                <p>¿Ya tienes una Cuenta?<label>  </label><a href="#">Inicia Sesión</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="forgot-box">
+        <form action="">
+            <h1>Recuperar Contraseña</h1>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Usuario</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <button type="submit">Enviar Enlace</button>
+            <div class="backtologin-link">
+                <a href="#">Volver a Iniciar Sesión</a>
+            </div>
+        </form>
+    </div>
+    <div class="change-box">
+        <form action="">
+            <h1>Cambiar Contraseña</h1>            
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Confirmar Contraseña</label>
+            </div>
+            <button type="submit">Cambiar Contraseña</button>
+            <div class="backtologin-link">
+                <a href="#">Volver a Iniciar Sesión</a>
+            </div>
+        </form>
+    </div>
+</section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
 </html>

@@ -1,21 +1,12 @@
 import { db, collection, getDocs } from './firebase-config.js'; 
 
 const getCines = async () => {
-    
     const querySnapshot = await getDocs(collection(db, "cines"));
     
     if (!querySnapshot.empty) {
-        const uniqueCines = new Map();
-
-        querySnapshot.forEach((doc) => {
-            const cine = doc.data();
-            uniqueCines.set(cine.id, cine); 
-        });
-
-        const cines = Array.from(uniqueCines.values());
-
         let html = `<br/><h1>Nuestros Cines</h1><br/>`
-        cines.forEach(cine => {
+        querySnapshot.forEach((doc) => {
+            const cine = doc.data(); 
             html += `				
 				<div class="contenido-cine">
 	        	    <img src="img/cine/${cine.id}.1.jpg" width="227" height="170"/>
@@ -31,8 +22,6 @@ const getCines = async () => {
             `
         });
         document.getElementById('contenido-interno').innerHTML = html
-    } else {
-        document.getElementById('contenido-interno').innerHTML = `<p>No se encontraron cines.</p>`
     }
 }
 getCines()
