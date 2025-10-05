@@ -9,7 +9,7 @@
 </head>
 <body>
     <section>
-    <div class="login-box">
+    <div class="login-box" id="login-form">
         <form action="">
             <h1>Iniciar Sesión</h1>
             <div class="input-box">
@@ -32,13 +32,19 @@
             <button type="submit">Iniciar Sesión</button>
             <div class="register-link">
                 <p>¿No tienes una Cuenta?<label>  </label><a href="#">Regístrate</a></p>
+            <p>O inicia sesión con:</p>
             </div>
+
+            <button type="button" id="btn-google-login" style="background: #db4437; color: white;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" style="width: 20px; vertical-align: middle; margin-right: 10px; background-color: white; padding: 2px; border-radius: 50%;">
+                Google
+            </button>
             <div class="social-links">
                 <p><a href="https://www.google.com/"><ion-icon name="logo-google"></ion-icon></a><label>  </label><a href="https://facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a><label>  </label><a href="https://github.com/"><ion-icon name="logo-github"></ion-icon></a></p>
             </div>
         </form>
     </div>
-    <div class="register-box">
+    <div class="register-box" id="register-form">
         <form action="">
             <h1>Registro</h1>
             <div class="input-box">
@@ -70,7 +76,7 @@
             </div>
         </form>
     </div>
-    <div class="forgot-box">
+    <div class="forgot-box" id="forgot-form">
         <form action="">
             <h1>Recuperar Contraseña</h1>
             <div class="input-box">
@@ -89,7 +95,7 @@
             </div>
         </form>
     </div>
-    <div class="change-box">
+    <div class="change-box" id="change-form">
         <form action="">
             <h1>Cambiar Contraseña</h1>            
             <div class="input-box">
@@ -116,6 +122,6 @@
 </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="script.js"></script>
+<script type="module" src="js/script.js"></script>
 </body>
 </html>
